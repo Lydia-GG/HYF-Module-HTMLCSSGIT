@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: monospace;
+}
+/* start parent div */
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(../img/papyrus.jpg);
+  z-index: 1;
+}
+.container::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 50%;
+  z-index: 2;
+}
+/* end parent section */
+/* Start left section */
+.left-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding-bottom: 15px;
+  z-index: 3;
+}
+.person {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.person img {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border: 3px solid white;
+  border-radius: 25%;
+}
+
+.person h2 {
+  line-height: 40px;
+  color: #333;
+  position: relative;
+  font-size: 28px;
+}
+/* start the second section of the left side >>> Info */
+.info {
+  margin: 10px auto;
+  color: #333;
+  font-size: 22px;
+}
+.info p {
+  font-size: 20px;
+  line-height: 1.7;
+  padding: 0 10px;
+}
+/* end the second section of the left side >>> Info */
+/* end left section */
+
+/* start right section */
+.right-section {
+  position: relative;
+  padding: 50px 10px 0 30px;
+  width: 75%;
+  z-index: 3;
+}
+/* https://www.youtube.com/watch?v=RMQ64ZmAqPo from this video i learned how to make these tabs without JS
+the new things i have learned was checked selector (only for input element checkbox and radio and it selects elements when they are in the selected state)and for attribute (which specifies which form element is linked to the label .)*/
+
+/* start tabs */
+
+.tabs ul {
+  display: flex;
+  list-style: none;
+  padding: 10px 10px 0 30px;
+}
+
+.tabs ul li label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding: 15px 40px;
+  min-width: 100px;
+  background-color: #f87500;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.tabs ul li:nth-child(2) label {
+  background-color: #93c816;
+}
+.tabs ul li:nth-child(3) label {
+  background-color: #f40644;
+}
+.tabs ul li:nth-child(4) label {
+  background-color: #650197;
+}
+/* end tabs */
+/* start content (tabs)*/
+.info2 {
+  padding-left: 30px;
+  display: flex;
+}
+
+.info2 input[type='radio'] {
+  display: none;
+}
+.info2 input[type='radio']:checked + .content {
+  display: block;
+}
+.content {
+  position: relative;
+  overflow: hidden;
+  width: 92.3%;
+  padding-left: 80px;
+  padding-top: 30px;
+  height: 400px;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  line-height: 2;
+  display: none;
+  color: #333;
+  font-size: 20px;
+}
+.content:nth-of-type(1) {
+  border: 1.5px solid #f87500;
+  box-shadow: -5px -5px 10px 2px #f87500 inset, 5px 5px 10px 2px #f87500 inset;
+}
+.content:nth-of-type(2) {
+  border: 1.5px solid #93c816;
+  box-shadow: -5px -5px 10px 2px #93c816 inset, 5px 5px 10px 2px #93c816 inset;
+}
+
+.content:nth-of-type(3) {
+  border: 1.5px solid #f40644;
+  box-shadow: -5px -5px 10px 2px #f40644 inset, 5px 5px 10px 2px #f40644 inset;
+}
+.content:nth-of-type(4) {
+  border: 1.5px solid #650197;
+  box-shadow: -5px -5px 10px 2px #650197 inset, 5px 5px 10px 2px #650197 inset;
+}
+/* end tabs */
+/* start content Edu ,Exp. ,Skills ,Lang */
+.content ul {
+  list-style: none;
+}
+.content .bullet {
+  padding-top: 20px;
+  padding-left: 30px;
+  list-style: square;
+}
+.content .bullet li {
+  padding: 15px;
+  font-weight: 600;
+}
+.content span i {
+  position: absolute;
+  right: 90px;
+  top: 90px;
+  width: 200px;
+  height: 200px;
+  padding-left: 20px;
+}
+
+.fx ul li {
+  display: flex;
+  padding-top: 20px;
+}
+.fx h3 {
+  padding-right: 70px;
+}
+.fx .diploma {
+  padding-bottom: 10px;
+}
+.fx .position {
+  padding-right: 5px;
+}
+.content .fa-graduation-cap {
+  color: #f87500;
+}
+.content .fa-briefcase {
+  color: #93c816;
+}
+.content .fa-language {
+  color: #f40644;
+}
+.content .fa-laptop {
+  color: #650197;
+  padding-left: 20px;
+}
+.fx .skll h3 {
+  padding: 5px;
+}
+.skll .skill {
+  position: relative;
+  width: 250px;
+  height: 20px;
+  display: block;
+  background: #ddd;
+}
+.skll .skill span {
+  position: absolute;
+  height: 100%;
+  background: #650197;
+  top: 0;
+  left: 0;
+}
+/* End content Edu ,Exp. ,Skills ,Lang */
+
+/* start bottom section >>> Contact*/
+.bottom-section {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+/* start contact */
+.contact {
+  padding-left: 20px;
+}
+.contact ul {
+  font-size: 14px;
+  position: relative;
+  display: flex;
+}
+.contact ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.contact .icon {
+  display: inline-block;
+  color: #1967a3;
+  width: 25px;
+  font-size: 20px;
+}
+.contact .text {
+  font-size: 16px;
+  margin-left: 10px;
+  color: #333;
+}
+
+/* end bottom section >>> Contact*/

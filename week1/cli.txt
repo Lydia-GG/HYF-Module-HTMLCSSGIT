@@ -1,0 +1,20 @@
+Using the CLI, create a plain text file (.txt) that contains the commands necessary to answer the following questions:
+
+1-How do I create a hidden file or folder? How do I display it in the CLI?
+
+first you create a folder/file the normal way
+to create a folder >>>>    mkdir foldername
+to create a file  >>>>  touch file-name
+
+then you can hide or unhide(display) it 
+to hide it >>>>  attrib +h the folder/file route
+to unhide(display) it >>>> attrib -h the folder/file route
+
+2-How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun?
+
+mkdir -p /c/Users/myusername/these/folders/are/just/for/fun
+
+3-How do I append a message to a file, without a newline character, so the output would be:
+
+echo 'first message' > filename
+echo 'second message' >> filename
